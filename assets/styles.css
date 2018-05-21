@@ -1,0 +1,115 @@
+.topnav {
+    background-color: #0e3357;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: rgb(255,255,255);
+    text-align: center;
+    padding: 14px 16px;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+.home1{
+    margin-left:10%;
+}
+.contact{
+    margin-left: 80%;
+
+}
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #666666;
+    color: black;
+}
+.row2{
+    margin-left:10%;
+    margin-bottom: 5%;
+    margin-top: 5%
+}
+.row1{
+    background-color: #eaf4f6;
+}
+.contain{
+    text-align: center;
+}
+.box1{
+    color:white;
+    background-color: #0e3357;
+    height:25%;width:70%;
+    
+    text-align: center;
+    padding: 8% 15%;
+    margin-bottom: 10%
+}
+.box2{
+    color:white;
+    background-color:#0e3357;
+    height:50%;width:100%;
+    padding: 3% 15%;
+    margin-bottom: 10%
+}
+@media only screen and (max-width: 1500px) {
+    .heading {
+        font-size: 500%;
+        padding:5% 
+    }
+    .box{
+     position: relative;
+    top: 85%;
+    left: 50%;
+    color:#fff;
+    background-color: rgb(58,90,119);
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    height: 70%;
+    margin-top: 2%;
+    
+    text-align: center;
+    width: 75%;
+}
+.b1{
+    background-color: rgb(71,183,195);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #fff;
+
+}
+.image1{
+    height:100%; width:100%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+    .heading {
+        font-size: 200%;
+        padding:5% 
+    }
+    .box{
+        position: relative;
+        color:#fff;
+        background-color: rgb(58,90,119);
+        transform: translate(-50%, -50%);
+        opacity: 0.9;
+        text-align: center;
+       height: 70%
+    }
+    .b1{
+        background-color: rgb(71,183,195);
+        margin-top: 10px;
+        color: #fff;
+
+    }
+    .box1{
+    
+    margin-bottom: 70%
+}
+   
+}
+    .image1{
+    height:100%; width:100%;
+}
+}
