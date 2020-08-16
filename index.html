@@ -1,107 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
    <head>
-      <meta charset="UTF-8">
-      <title>I'm Savreen✋ </title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/styles-minify.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <style>
-         .blackandwhite{
-         /*-webkit - filter: grayscale(100 % );  
-         Safari 6.0 - 9.0 */
-         filter: grayscale(100%);
+      <title>Savreen's Portfolio</title>
+      <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+      <script src="./jquery-1.7.2.js"></script>
+      <script src="./bootstrap/js/bootstrap.min.js"></script>
+      <script src="./turn.js/turn.js"></script>
+      <style type="text/css">
+         body {
+         background: #ccc;
+         text-align: center;
+         font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
+         font-size: 100%;
          }
+         #book {
+         position: absolute;
+         width: 90%;
+         height: 100%;
+         /* top: 50%; */
+         margin: 0 auto;
+         }
+         #book .turn-page{
+         background-color:rgb(100, 197, 108);
+         z-index: 224;
+         transform-style: preserve-3d;
+         backface-visibility: hidden;
+         }
+         #book .data{
+         text-align:center;
+         font-size:250%;
+         line-height:250%;
+         }
+         #book .cover h1{
+         color:white;
+         text-align:center;
+         font-size:300%;
+         line-height:500px;
+         }
+         .content{
+         text-align:left;
+         }
+         .even{  
+         color:white;
+         background-image:-webkit-linear-gradient(left, rgb(100, 197, 108) 95%, rgb(151, 190, 159) 100%);
+         background-image:-moz-linear-gradient(left, rgb(100, 197, 108) 95%, rgb(151, 190, 159) 100%);
+         background-image:-o-linear-gradient(left, rgb(100, 197, 108) 95%, rgb(151, 190, 159) 100%);
+         background-image:-ms-linear-gradient(left, rgb(100, 197, 108) 95%, rgb(151, 190, 159) 100%);
+         }
+         .odd{
+         color:rgb(100, 197, 108);
+         background-image:-webkit-linear-gradient(right,#FFF 95%, #ddd 100%);
+         background-image:-moz-linear-gradient(right, #FFF 95%, #ddd 100%);
+         background-image:-o-linear-gradient(right, #FFF 95%, #ddd 100%);
+         background-image:-ms-linear-gradient(right, #FFF 95%, #ddd 100%);
+         }
+         a{
+         color:rgb(100, 197, 108);
+         text-shadow: rgba(17, 17, 17, 0.5) 0 -1px 0, rgba(255, 255, 255, 0.6) 0 2px 1px; 
+         /* margin: 20px; */
+         text-align: justify;
+         }
+         table, th, td {
+         border: 2px solid;
+         border-collapse: collapse;
+         }
+         /* div{
+         padding: 2px;
+         } */
+         th, td {
+         padding: 15px;
+         text-align: left;
+         }
+         .column {
+         float: left;
+         width: 50%;
+         text-align: center;
+         }
+         /* Clear floats after the columns */
+         .row:after {
+         content: "";
+         display: table;
+         clear: both;
+         }
+         p{
+         margin-left: 3%;
+         margin-right: 3%;
+         text-align: justify;
+         }
+         .centerStart { left: -20%;transition: left 0.2s ease-in-out;} 
       </style>
-     <script src="script.js"></script>
    </head>
    <body>
-      
-      <div class="topnav home row">
-      <div class="col-md-6"></div>
-       <div class="col-md-3"></div>
-        <div class="col-md-3">
-         <a class="home1" href="https://github.com/rubal-98/rubal-98.github.io/blob/master/Resume.pdf">Resume</a>
-      
-    
-            <a href="https://www.linkedin.com/in/savreen-kaur-267332139/"><img src="https://www.emergo.nl/getattachment/346b6fe2-a941-4b1d-96ad-7c81bdbd404b/LinkedIN.aspx" style="height:23px" alt="linkedin icon"></a>
-            <a href="https://github.com/rubal-98"><img src="images/github_icon.png" style="height:23px" alt="git icon"></a>
+      <div id="book" class="centerStart">
+         <div class="cover" page="1" >
+            <h1>All about Savreen</h1>
+         </div>
+         <div class="cover even" page="2">
+            <div class="data">About Me</div>
+         </div>
+         <div class="content odd" page="3">
+            <div class="data">Savreen Kaur</div>
+            <div>
+               <p>Hey There 👋!!<br><br> I am 22 years old and a Software Engineer by profession. I am highly passionate about coding and about researching and integrating various technologies that are present out there in the world.<br><br> I am a determined person who likes to solve complex problems. I get along with other people very easily.<br> Fun-Fact about me: I complete a task super-quickly with great accuracy that is assigned to me, so that I get extra time to laze around😜.<br><br> My family and friends are my greatest cheerleader. They have always supported and pushed me to achieve beyond my limits.</p>
+            </div>
+            <!-- determination -->
+         </div>
+         <div class="content even" page="4"></div>
+         <div class="content odd" page="5">
+            <div class="data">Contents</div>
+            <div><a href="javascript:gotoPage('7')">Part 1</a></div>
+            <br>
+            <ul>
+               <li>
+                  <a href="javascript:gotoPage('7')">Professional Life</a><br>
+                  <ol>
+                     <li><a href="javascript:gotoPage('7')">Experiences</a></li>
+                     <li><a href="javascript:gotoPage('9')">Education</a></li>
+                     <li><a href="javascript:gotoPage('11')">Skills/Tools</a></li>
+                     <li><a href="javascript:gotoPage('13')">Achievements</a></li>
+                  </ol>
+               </li>
+            </ul>
+            <br>
+            <div><a href="javascript:gotoPage('15')">Part 2</a></div>
+            <br>
+            <ul>
+               <li><a href="javascript:gotoPage('15')">Glance at the things I developed</a></li>
+            </ul>
+            <br>
+            <div><a href="javascript:gotoPage('17')">Part 3</a></div>
+            <br>
+            <ul>
+               <li>
+                  <a href="javascript:gotoPage('17')">Personal Life</a><br>
+                  <ol>
+                     <li><a href="javascript:gotoPage('17')">Adventures</a></li>
+                     <li><a href="javascript:gotoPage('19')">Hobbies</a></li>
+                  </ol>
+               </li>
+            </ul>
+            <br>
+            <div> <a href="javascript:gotoPage('21')">Connect with Me</a></div>
+         </div>
+         <div class="cover even" page="7">
+            <h1>Part 1</h1>
+            <br>Professional Life
+         </div>
+         <div class="content odd" page="8">
+            <div class="data">Experiences</div>
+            <div>
+               <p>I have been working at HighRadius for past 2 years now and my journey has progressed from being an intern to now being promoted Software Engineer-I.
+                  <br><br>
+                  I have learnt alot and I have been involved in finding problems involving major manual effort and solving those with or without integrating into the framework.
+                  <br>
+               <ul>
+                  My day to day work involves->
+                  </p>
+                  <li>working on full-stack features for a Collections product.</li>
+                  <li>finding solutions for optimising the existing code using profiling.</li>
+                  <li>resolving issues in Prod and Non-Prod Environments.</li>
+               </ul>
+               <p>
+                  I even worked as Q&A expert for Computer Science at Chegg, Inc.
+               </p>
+            </div>
+         </div>
+         <div class="content even" page="9"></div>
+         <div class="content odd" page="10">
+            <div class="data">Education</div>
+            <table style="width:100%">
+               <tr>
+                  <th>Qualification Degree</th>
+                  <th>College/ School</th>
+                  <th>University/ Board</th>
+                  <th>Year</th>
+                  <th>Marks Scored</th>
+               </tr>
+               <tr>
+                  <td>B.Tech (CSE)</td>
+                  <td>Chitkara Institute Of
+                     Engg. & Tech., Punjab
+                     Campus
+                  </td>
+                  <td>Chitkara
+                     University
+                  </td>
+                  <td>2015-2019</td>
+                  <td>9.85 CGPA</td>
+               </tr>
+               <tr>
+                  <td>Class XII (Non-Medical)</td>
+                  <td>Sacred Heart Convent Sr. Sec.
+                     School, Jagadhri
+                  </td>
+                  <td>C.B.S.E</td>
+                  <td>2014-2015</td>
+                  <td>83.6%</td>
+               </tr>
+               <tr>
+                  <td>Class X</td>
+                  <td>Sacred Heart Convent Sr. Sec.
+                     School, Jagadhri
+                  </td>
+                  <td>C.B.S.E</td>
+                  <td>2012-2013</td>
+                  <td>9.8 CGPA</td>
+               </tr>
+            </table>
+         </div>
+         <div class="content even" page="11"></div>
+         <div class="content odd" page="12">
+            <div class="data">Skills/Tools</div>
+            <div>
+               <p>I love doing R&D on various Software Engineering tools and following are few of the skills/tools I have worked on so far.</p>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+               <div class="column" style="background-color:#ddd;">
+                  <h4>Java</h4>
+               </div>
+               <div class="column" style="background-color:#ccc;">
+                  <h4>CPP and C</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="column" style="background-color:#ccc;">
+                  <h4>Algorithms</h4>
+               </div>
+               <div class="column" style="background-color:#ddd;">
+                  <h4>Data Structures</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="column" style="background-color:#ddd;">
+                  <h4>Spring</h4>
+               </div>
+               <div class="column" style="background-color:#ccc;">
+                  <h4>Hibernate</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="column" style="background-color:#ccc;">
+                  <h4>SQL</h4>
+               </div>
+               <div class="column" style="background-color:#ddd;">
+                  <h4>Python(Basics)</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="column" style="background-color:#ddd;">
+                  <h4>Jacoco</h4>
+               </div>
+               <div class="column" style="background-color:#ccc;">
+                  <h4>log4j</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="column" style="background-color:#ccc;">
+                  <h4>Git, Jenkins, Grafana,
+                     <br>Maven
+                  </h4>
+               </div>
+               <div class="column" style="background-color:#ddd;">
+                  <h4>FreeTTS, Java Mail, Diff Match Patch</h4>
+               </div>
+            </div>
+            <div class="row">
+               <div class="column" style="background-color:#ddd;">
+                  <h4>JUnit</h4>
+               </div>
+               <div class="column" style="background-color:#ccc;">
+                  <h4>JavaVisualVM</h4>
+               </div>
+            </div>
+         </div>
+         <div class="content even" page="13"></div>
+         <div class="content odd" page="14">
+            <div class="data">Achievements</div>
+            <div>
+               <p>I have participated in several hackathons-></p>
+            </div>
+            <ul>
+               <li>Google India Hackathon 2018.</li>
+               <li>Won 3rd prize at ACM-W Hackathon 2017 held at a National Level out of approximate 200 teams.</li>
+               <li>Scored 5th position in a Topcoder contest from a total of 151 contestants in 2017.</li>
+            </ul>
+            <div>
+               <p>I love being on stage as well and have-></p>
+            </div>
+            <ul>
+               <li>Been an Emcee at Umixo'19 and '18 at HighRadius Technologies.</li>
+               <li>Hosted Stage for Bits and Bytes club and on Explore'16 at Chitkara University.</li>
+               <li>Scored 2nd position in Speech competition on Hindi Diwas.</li>
+            </ul>
+            <br>
+            <div>
+               <p>Apart from that, I have been employee of the quarter twice and employee of the year once in my organisation.</p>
+            </div>
+            <br>
+         </div>
+         <div class="cover even" page="15">
+            <h1>Part 2</h1>
+         </div>
+         <div class="content odd" page="16">
+            <div class="data">Projects I developed</div>
+            <div>
+               <ul>
+               <li>
+                  <h4>Chitkara Explorer</h4>
+                  A 'firebase' hosted web application which helps you to locate and explore
+                  anything to everything in an and around Chitkara's campus.
+                  <a href="https://chitkaraexplorer.firebaseapp.com/">https://chitkaraexplorer.firebaseapp.com/</a>
+               </li>
+               <li>
+                  <h4>Team Viewer Replica</h4>
+                  It first transfers the files into the
+                  buffer and then to sockets. In this I made an end to end connection and port
+                  forwarding is required on the server end.
+               </li>
+               <li>
+                  <h4>Arcade Game</h4>
+                  It consists of space shooter which is a tribute to the space shooter game we
+                  all played in our childhood.
+                  <a href="http://space-shooter-12.firebaseapp.com/">http://space-shooter-12.firebaseapp.com/</a>
+               </li>
+               <li>
+                  <h4>Health First</h4>
+                  This was build keeping healthcare and
+                  emergencies in everyday life in mind. It helps you locate hospitals nearby you or
+                  anywhere in the world.
+                  <a href="https://health-first-12.firebaseapp.com/">https://health-first-12.firebaseapp.com/</a>
+               </li>
+               <li>
+                  <h4>Security System</h4>
+                  A Java Application used to ensure security and detect any
+                  intrusion. Two factor authentication to both
+                  authorised and unauthorised personnel using a password and an OTP.
+               </li>
+            </div>
+         </div>
+         <div class="cover even" page="17">
+            <h1>Part 3</h1>
+            <br>Personal Life
+         </div>
+         <div class="content odd" page="18">
+            <div class="data">Adventures</div>
+            <div>
+               I used to try different adventure sports before Covid-19 ever happened😷. Here are a few of the recents.
+               <ul>
+                  <li>Sky Diving</li>
+                  <div><img src="/Users/savreen/Desktop/skyDive.jpg"  width="250" height="100"/></div>
+                  <li>Bungee Jumping</li>
+                  <div>
+                     <video  width="250" height="150" controls>
+                        <source src="/Users/savreen/Desktop/Bungee.mp4" type="video/mp4">
+                     </video>
+                  </div>
+                  <li>Scuba Diving</li>
+                  <div>Add photo here</div>
+               </ul>
+            </div>
+         </div>
+         <div class="content even" page="19"></div>
+         <div class="content odd" page="20">
+            <div class="data">Hobbies</div>
+            <div>At times when I am not working, I like to read, work-out(only so that I can eat more- Typical Punjabi), dance, play chess, click pictures, swim, write journals.</div>
+         </div>
+         <div class="content even" page="21"></div>
+         <div class="content odd" page="22">
+            <div class="data">Connect with Me</div>
+            <ul>
+               <li>LinkedIn-<a href="https://www.linkedin.com/in/rubal-98/">https://www.linkedin.com/in/rubal-98/</a></li>
+               <li>Github-<a href="https://github.com/rubal-98">https://github.com/rubal-98</a></li>
+               <li>Instagram-<a href="https://www.instagram.com/rubal_98/">https://www.instagram.com/rubal_98/</a>
+               <li>Resume-</li>
+            </ul>
+         </div>
+      </div>
+      <script>
+         function gotoPage(v) {
+         $('#book').turn('page', v);
+         }
+         var a=new Date().getFullYear()-1998;
          
-      </div>
-
-      </div>
-      
-      <div class="row1 row">
-         <img src="images/me-min.png" class="image1" alt="me image">
-         <div class="box">
-            <h1 class="heading" >SAVREEN KAUR</h1>
-            <h4>A CREATIVE PROGRAMMER</h4>
-            <a href="#l"><button class="b1">Learn More</button></a>
-         </div>
-      </div>
-      
-      <div>
-         <h1 class="contain" id="l">PROJECTS</h1>
-         <div class="row row2">
-            <div class="col-md-6">
-               <a href="https://health-first-12.firebaseapp.com">
-                  <img class="hs" src="images/project1-min.png" style="height:70%;width:70%" alt="health first">
-                  <div class="box1">
-                     <h4>HEALTH FIRST</h4>
-                  </div>
-               </a>
-            </div>
-            <div class="col-md-6">
-               <a href="https://github.com/rubal-98/SecuritySystem">
-                  <img  class="hs1" src="images/project2-min.png" style="height:70%;width:70%" alt="security system">
-                  <div class="box1">
-                     <h4>SECURITY SYSTEM</h4>
-                  </div>
-               </a>
-            </div>
-         </div>
-         <div class="row row2">
-            <div class="col-md-6">
-               <a href="https://github.com/rubal-98/Front-End-Web-Developer-Nanodegree---Udacity/tree/master/Project%205--The%20Frogger's%20Game">
-                  <img  class="hs2" src="images/project3-min.png" style="height:70%;width:70%" alt="frogger's game">
-                  <div class="box1">
-                     <h4>FROGGER'S GAME</h4>
-                  </div>
-               </a>
-            </div>
-            <div class="col-md-6">
-               <a href="https://github.com/rubal-98/Apple-Pie">
-                  <img  class="hs3" src="images/project4-min.png" style="height:70%;width:70%" alt="apple pie">
-                  <div class="box1">
-                     <h4>APPLE&nbsp;&nbsp;PIE</h4>
-                  </div>
-               </a>
-            </div>
-         </div>
-      </div>
-      <div class="row">
-         <div class="box2">
-            <h1 class="contain">SKILLS</h1>
-            <h4>→Fundamental knowledge in object-oriented
-               design, data structures, algorithm design<br>
-               →Knowlegde about Operating Systems
-               and Databases<br>
-               →Proficiency in C, C++, Java, Swift<br>
-               →Hands-on experience in HTML, CSS, Javascript, JQuery<br>
-               →Comprehension about MS-Office<br>
-            </h4>
-         </div>
-      </div>
-      <div class="row2" style="text-align:center; font-size:115%;">
-         Savreen Kaur Sethi<br>
-         #114/2 SSM Colony, Yamunanagar, Haryana<br>
-         January 12, 1998<br>
-         sksethi1998@gmail.com<br>
-      </div>
-      
-      <script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-      <script async defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script><script async defer src="script.js"></script>
+              $(document).ready(function() {
+              	
+              		
+              		$('#book').turn({
+              			autoCenter: true,
+              			acceleration: true,
+              			elevation: 50,
+              			gradients: !$.isTouch
+              		});
+              
+              		$(document).bind('keydown', function(key) {
+              			if (key.target && key.target.tagName.toLowerCase() != 'input')
+              				if (key.keyCode == 37)
+              					$('#book').turn('previous');
+              				else if (key.keyCode == 39)
+              					$('#book').turn('next');
+              		});
+         
+         // $('#book').turn();
+         $('#book').bind('turned', function(e, page, pageObj) {
+         
+         if(page == 1 && $(this).data('done')){
+         $('#book').addClass('centerStart');
+         }
+         else {
+         $('#book').removeClass('centerStart');
+         }
+         
+         });
+              		
+              	});
+           
+      </script>
    </body>
 </html>
