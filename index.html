@@ -2,6 +2,7 @@
 <html>
    <head>
       <title>Savreen's Portfolio</title>
+      <script src="./jquery-1.7.2.js"></script>
       <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
       <script src="./bootstrap/js/bootstrap.min.js"></script>
       <script src="./turn.js/turn.js"></script>
@@ -92,6 +93,15 @@
             margin-right: 100px; 
          }
          .centerStart { left: -20%;transition: left 0.2s ease-in-out;} 
+        .page-number {
+            width: 100%;
+            bottom: 25px;
+            position: absolute;
+            display: block;
+            text-align: center;
+            line-height: 30px;
+            font-size: 11px;
+         }
       </style>
    </head>
    <body>
@@ -168,6 +178,7 @@
                   I even worked as Q&A expert for Computer Science at Chegg, Inc.
                </p>
             </div>
+            <span class="page-number">8</span>
          </div>
          <div class="content even" page="9"></div>
          <div class="content odd" page="10">
@@ -211,6 +222,7 @@
                   <td>9.8 CGPA</td>
                </tr>
             </table>
+         <span class="page-number">10</span>
          </div>
          <div class="content even" page="11"></div>
          <div class="content odd" page="12">
@@ -278,6 +290,7 @@
                   <h4>JavaVisualVM</h4>
                </div>
             </div>
+            <span class="page-number">12</span>
          </div>
          <div class="content even" page="13"></div>
          <div class="content odd" page="14">
@@ -302,7 +315,7 @@
             <div>
                <p>Apart from that, I have been employee of the quarter twice and employee of the year once in my organisation.</p>
             </div>
-            <br>
+            <span class="page-number">14</span>
          </div>
          <div class="cover even" page="15">
             <h1>Part 2</h1>
@@ -343,6 +356,7 @@
                   authorised and unauthorised personnel using a password and an OTP.
                </li>
             </div>
+            <span class="page-number">16</span>
          </div>
          <div class="cover even" page="17">
             <h1>Part 3</h1>
@@ -363,11 +377,13 @@
                   <div><img src="images/scubaDive.jpg"  width="250" height="100"/></div>
                </ul>
             </div>
+            <span class="page-number">18</span>
          </div>
          <div class="content even" page="19"></div>
          <div class="content odd" page="20">
             <div class="data">Hobbies</div>
             <div>At times when I am not working, I like to read, work-out(only so that I can eat more- Typical Punjabi), dance, play chess, click pictures, swim, and participate in speeches/debates.</div>
+            <span class="page-number">20</span>
          </div>
          <div class="content even" page="21"></div>
          <div class="content odd" page="22">
@@ -378,7 +394,9 @@
                <li>Instagram-<a href="https://www.instagram.com/rubal_98/">https://www.instagram.com/rubal_98/</a>
                <li>Resume-</li>
             </ul>
+            <span class="page-number">22</span>
          </div>
+         
       </div>
       <script>
          function gotoPage(v) {
